@@ -1,0 +1,3 @@
+# `bfd`: BrainF*\*k Decompiler:
+
+&emsp;The BrainF*\*k Decompiler is a lot like the BrainFuzz Compiler, but in reverse. You just give it an input file and an output file, like `./bfd input.bf output.bfz`. Then, it decompiles your BrainF*\*k code into BrainFuzz code, and even recognizes the extra BrainFuzz instructions. It cannot restore comments, or convert numbers back into characters. This can be used to decompile ANY BrainF*\*k program.

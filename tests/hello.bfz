@@ -1,0 +1,40 @@
+1,A simple Hello World program in BrainFuzz!;
+
+set,H;
+out;
+
+set,e;
+out;
+
+set,l;
+out;
+out;
+
+set,o;
+out;
+
+!,32 is ASCII space character;
+set,32;
+out;
+
+set,W;
+out;
+
+set,o;
+out;
+
+set,r;
+out;
+
+set,l;
+out;
+
+set,d;
+out;
+
+set,!;
+out;
+
+!,10 is ASCII newline character;
+set,10;
+out;
