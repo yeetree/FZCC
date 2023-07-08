@@ -63,8 +63,16 @@ void interpretCode(const std::string& commands)
         }
         case ',':
         {
-            char input;
-            std::cin >> input;
+            char input = NULL;
+            system("stty raw");
+            while(1) {
+                input = getchar();
+                // terminate when character is pressed
+                if(input != NULL) {
+                    system("stty cooked");
+                    break;
+                }  
+            }
             *dataPtr = input;
         }
         case '[':
@@ -112,8 +120,8 @@ void interpretCode(const std::string& commands)
         instructionPtr++;
     }
 
-    if (!instructionStack.empty())
-        throw std::runtime_error("Found a '[' that did not have a matching ']'!");
+    //if (!instructionStack.empty())
+        //throw std::runtime_error("Found a '[' that did not have a matching ']'!");
 }
 
 int main(int argc, char* argv[])
@@ -129,6 +137,8 @@ int main(int argc, char* argv[])
     {
         std::string commands = inputFile(argv[1]);
         interpretCode(commands);
+        system("stty cooked");
+        std::cout<<std::endl;
     }
     catch (const std::exception& e)
     {
