@@ -12,6 +12,24 @@ std::string decompile(std::string file)
 {
     std::string output;
 
+    //filter everything else out
+    std::string tmp = "";
+    for(int i=0; i<file.length(); i++)
+    {
+        switch(file[i])
+        {
+            case '+': tmp+='+'; break;
+            case '-': tmp+='-'; break;
+            case '<': tmp+='<'; break;
+            case '>': tmp+='>'; break;
+            case '[': tmp+='['; break;
+            case ']': tmp+=']'; break;
+            case ',': tmp+=','; break;
+            case '.': tmp+='.'; break;
+        }
+    }
+    file=tmp;
+
     for(int i=0; i<file.length(); i++)
     {
         if(file[i] == '+')

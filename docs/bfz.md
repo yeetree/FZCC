@@ -21,6 +21,10 @@ set,c; out;
 Will print:
 `abc`.
 
+You can do comments by using: `!, COMMENT HERE ;`
+You have to use the commas and semicolons because the compiler still treats it as an instruction,
+just it doesn't compile to anything.
+
 Here are all of the instructions:
 * `left, [num];` or `l, [num];`: Moves pointer to the left by [num]. Moves to the left by 1 if not specified.
 * `right, [num];` or `r, [num];`: Moves pointer to the right by [num]. Moves to the right by 1 if not specified.
